@@ -1,0 +1,10 @@
+{
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "Интуитивный и быстрый синтезатор речи (TTS)"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "Speak"
+   }
+}

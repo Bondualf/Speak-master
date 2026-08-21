@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="speakingrate">
+        <label>
+            <h3 id="lang_rate" class="locale">Скорость: <span id="iwords">0</span> <span id="lang_wpm" class="locale">слов/мин</span></h3>
+            <input id="irate" type="range" min="0.1" max="10" value="10" step="0.1">
+        </label>
+        <br>
+        <label>
+            <h3 class="locale">Высота голоса: <span id="pitch-value">4</span></h3>
+            <input id="pitch-range" type="range" min="0" max="8" value="4" step="0.1">
+        </label>
+        <br>
+        <label>
+            <h3 class="locale">Громкость: <span id="volume-value">100</span>%</h3>
+            <input id="volume-range" type="range" min="0" max="1" value="1" step="0.01">
+        </label>
+        <br>
+        <h3 class="locale">Выберите голос:</h3>
+        <select id="voices-select"></select>
+
+        <hr style="border-color: #333; margin: 20px 0 10px;">
+
+        <div class="toggle-group">
+            <label class="toggle-switch">
+                <input type="checkbox" id="toggle-button">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Показывать кнопку чтения</span>
+        </div>
+
+        <div class="toggle-group">
+            <label class="toggle-switch">
+                <input type="checkbox" id="toggle-extension">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Включить расширение</span>
+        </div>
+    </div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="scripts/popup.js"></script>
+</body>
+</html>

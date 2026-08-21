@@ -1,0 +1,32 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "scripts/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "images/icon-128.png",
+         "16": "images/icon-16.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Speak-master"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "match_about_blank": true,
+      "js": [ "scripts/cscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "ru",
+   "description": "Чтение текста голосом с умной подсветкой",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr/Av+sQM90Jxg3UFJYJ0hoLMs+qZ5+uxQYgRbaGtIS2kXggFhiJt9OGYcrNyicYaInrooj4W257yeX3sHk72hjFJIOd9h2f55sCJ14nVRlqdOB3oNBq0gjaZsNOhKdKkHqV4LR66FQtW6OBnSYcnwhKSMz6TViqtp6HXkssnPijzQ8NCLd8qqnDiuDtylZ99g5VXQr8fQs2VL3wLvMM4rMP05L8fPczTNdhZr6ojfAQArtEPOCfRBvn8L6gSGUudEuaPMZEapizjlSvTInG9sFdizh+bnyUngSzZjSUtN00lH53y7CqqxYmdSkRaomaTqBSD+1rgBLKU0oy+q4CyUQIDAQAB",
+   "manifest_version": 2,
+   "name": "Speak-master",
+   "permissions": [ "<all_urls>", "tabs", "tts", "storage", "contextMenus", "commands" ],
+   "version": "0.0.4"
+}
